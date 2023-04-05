@@ -9,6 +9,7 @@ const Button = ({
   danger,
   outline,
   rounded,
+  className,
   ...otherProps
 }) => {
   const getClassFromProps = () => {
@@ -28,7 +29,6 @@ const Button = ({
       }`;
     }
     if (danger) {
-      console.log("danger");
       return `border-red-500  ${
         outline ? "text-red-500 bg-white" : "text-white bg-red-500"
       }`;
@@ -39,13 +39,12 @@ const Button = ({
       }`;
     }
   };
-
   return (
     <button
-      className={`flex items-center px-3 py-1.5 border ${getClassFromProps()} ${
-        rounded && "rounded-full"
-      }`}
       {...otherProps}
+      className={`flex items-center px-3 py-1.5 border
+        ${getClassFromProps()} ${rounded && "rounded-full"}
+        ${className ? className : ""}`}
     >
       {children}
     </button>
