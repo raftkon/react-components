@@ -6,10 +6,7 @@ const Counter = ({ initialCount }) => {
 
   return (
     <div className="space-y-6">
-      <span className="p-3 border rounded">
-        {" "}
-        Counter is <span className="font-semibold text-lg">{counter}</span>
-      </span>
+      <span className="font-semibold text-lg">Counter is {counter}</span>
       <div className="flex space-x-4">
         <Button onClick={increment} secondary outline rounded>
           Increment

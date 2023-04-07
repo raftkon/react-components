@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/buttons" element={<ButtonPage />} />
         <Route path="/modal" element={<ModalPage />} />
         <Route path="/table" element={<TablePage />} />
-        <Route path="/counter" element={<CounterPage />} />
+        <Route path="/counter" element={<CounterPage initialCount={0} />} />
       </div>
     </div>
   );
